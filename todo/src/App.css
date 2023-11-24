@@ -1,0 +1,313 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+* {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #9c89b8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: url('./lock.png') auto;
+  
+}
+
+.App {
+  text-align: center;
+}
+
+
+
+h2{
+
+
+  color: #000000;
+
+  font-size: 15px;
+}
+h1 {
+  color: #000000;
+
+  font-size: 60px;
+}
+
+
+.items-count{
+
+font-size: 13px;
+margin-top: 5px;
+
+}
+
+
+
+.TodoWrapper {
+  background: #e8c2ca;
+  margin-top: 5rem;
+  padding: 2rem;
+  border-radius: 8px;
+  margin-top: 5rem;
+  animation: unset; 
+}
+
+.todo-input {
+  font-size: larger;
+  outline: none;
+  background: #f7d1cd;
+  font-weight: bold; /* Changed 'font' property to 'font-weight' */
+  border: 1px solid #8d5692;
+  border-radius: 5px; /* Added border-radius */
+  padding: 0.5rem 1rem;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  width: 300px;
+  color: #000000;
+}
+
+.todo-input::placeholder {
+  color: #5f56564d;
+}
+
+.todo-btn {
+  background: #b392ac;
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+  padding: 5px 20px; /* Adjusted padding */
+  margin-left: 16px;
+}
+
+.Todo {
+  display: grid;
+  justify-content: space-between;
+  align-items: center;
+  background: #b392ac;
+  color: #fff;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.title-delete {
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  font-size: larger;
+}
+
+.title {
+  flex: 1;
+  margin-right: 10px;
+}
+
+.TodoM {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #b392ac;
+  color: #fff;
+  padding: 5px;
+  border-radius: 1rem;
+  margin-bottom: 10px;
+  border: 5px solid;
+  width: 350px;
+  border-color: #f7d1cd;
+}
+
+.error {
+  display: grid;
+  justify-content: space-between;
+  align-items: center;
+  background: #e74545;
+  color: #fff;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  animation: shake 2s infinite;
+  display: none;
+}
+
+.fa-trash {
+  margin-left: 16px;
+  margin-right: 0.75rem;
+  color: #d0f4de;
+}
+
+.completed {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #9d7693;
+  color: #fff;
+  padding: 5px;
+  border-radius: 1rem;
+  margin-bottom: 10px;
+  border: 5px solid;
+  width: 350px;
+  border-color: #9d7693;
+  max-height: 500px;
+}
+
+.incompleted {
+  border-color: #cecece;
+  max-height:500px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #fff;
+  padding: 5px;
+  border-radius: 1rem;
+  margin-bottom: 10px;
+  background-color: #938aa1;
+  text-decoration: line-through;
+  cursor: pointer;
+}
+
+.action-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 3px;
+}
+
+.complete-icon {
+  cursor: pointer;
+  margin-right: 10px; /* Adjusted margin-right */
+}
+
+.delete-icon {
+  cursor: pointer;
+  margin-left: 10px; /* Adjusted margin-left */
+}
+
+.input-and-adding {
+  display: flex;
+  align-items: center;
+}
+
+/* Add styles for the button to toggle todos visibility */
+.toggle-todos-button {
+  background: transparent;
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+  margin-top: 5px;
+  border-radius: 5px;
+}
+
+
+.toggle-todos-button::before{
+
+
+
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0.2),
+    rgba(255, 255, 255, 0.5),
+    rgba(255, 255, 255, 0.2)
+  );
+  opacity: 0;
+  pointer-events: none;
+  transform: skewX(-20deg);
+}
+
+
+.toggle-todos-button:hover::before{
+
+  animation: shine 0.5s linear infinite;
+
+
+
+}
+
+@keyframes shine {
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 100%;
+  }
+}
+.toggle-todos-button:hover {
+  animation: shaking 0.5s infinite;
+}
+
+.todo-inputM {
+  flex: 1;
+  margin-right: 10px;
+  background: #f7d1cd;
+  font-weight: bold; /* Changed 'font' property to 'font-weight' */
+  border: 1px solid #8d5692;
+  border-radius: 10px;
+  
+  border: none;/* Added border-radius */
+  padding: 0.5rem 1rem;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  width: 350px;
+  color: #000000;
+}
+
+.adding {
+  cursor: pointer;
+}
+
+.delete {
+  left: 0%;
+  cursor: pointer;
+}
+
+.todo-btn:hover {
+  animation: shaking 0.5s infinite;
+}
+
+
+
+
+
+/*this is the code for rotating imgs */
+
+
+@keyframes shaking {
+  0% {
+    transform: rotate(0deg);
+  }
+  20% {
+    transform: rotate(-4deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+  70% {
+    transform: rotate(4deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes shake {
+  0% {
+    transform: translateX(0);
+  }
+  10% {
+    transform: translateX(-5px);
+  }
+  20% {
+    transform: translateX(5px);
+  }
+  30% {
+    transform: translateX(-5px);
+  }
+  40% {
+    transform: translateX(5px);
+  }
+  50% {
+    transform: translateX(-5px);
+  }
+}
